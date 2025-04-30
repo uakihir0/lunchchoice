@@ -1,0 +1,54 @@
+{
+  "restaurants": [
+    {
+      "id": "ichiran",
+      "name": "一蘭",
+      "address": "東京都渋谷区神宮前6-5-6",
+      "latitude": 35.6692,
+      "longitude": 139.7034,
+      "url": "https://www.ichiran.co.jp/shop/tokyo/shibuya/",
+      "tags": ["ラーメン", "一人", "カウンター", "24時間"],
+      "weight": 1
+    },
+    {
+      "id": "jojoen",
+      "name": "叙々苑",
+      "address": "東京都渋谷区神宮前6-12-2",
+      "latitude": 35.6695,
+      "longitude": 139.7038,
+      "url": "https://www.jojoen.co.jp/shop/shibuya/",
+      "tags": ["焼肉", "高級", "デート", "グループ"],
+      "weight": 1
+    },
+    {
+      "id": "tetsu",
+      "name": "つけ麺 TETSU",
+      "address": "東京都渋谷区神宮前6-12-2",
+      "latitude": 35.6695,
+      "longitude": 139.7038,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13000123/",
+      "tags": ["つけ麺", "一人", "カウンター"],
+      "weight": 1
+    },
+    {
+      "id": "oreno-french",
+      "name": "俺のフレンチ",
+      "address": "東京都渋谷区神宮前6-12-2",
+      "latitude": 35.6695,
+      "longitude": 139.7038,
+      "url": "https://www.oreno.co.jp/french/shibuya/",
+      "tags": ["フレンチ", "デート", "グループ", "おしゃれ"],
+      "weight": 1
+    },
+    {
+      "id": "oreno-italian",
+      "name": "俺のイタリアン",
+      "address": "東京都渋谷区神宮前6-12-2",
+      "latitude": 35.6695,
+      "longitude": 139.7038,
+      "url": "https://www.oreno.co.jp/italian/shibuya/",
+      "tags": ["イタリアン", "デート", "グループ", "おしゃれ"],
+      "weight": 1
+    }
+  ]
+} 

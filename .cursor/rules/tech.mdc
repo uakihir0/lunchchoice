@@ -1,0 +1,26 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 技術スタック概要
+
+## フロントエンド
+
+- Framework: Next.js (React)
+- Language: TypeScript
+- Package Manager: pnpm
+- Fetch: fetch()
+
+## バックエンド
+
+- Framework: Next.js
+- Language: TypeScript
+- Package Manager: pnpm
+- Fetch: fetch()
+
+## 留意事項
+
+- Use Next.js 14 App Router
+- Use Tailwind CSS for styling
+- Use Shadcn UI for components
