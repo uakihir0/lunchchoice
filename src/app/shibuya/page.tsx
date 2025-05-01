@@ -88,7 +88,7 @@ const Shibuya: React.FC = () => {
     <>
       <Header />
       <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-20 px-4 sm:px-6">
-        <div className="max-w-md w-full p-4 bg-white rounded-2xl shadow-lg border border-gray-100">
+        <div className="max-w-md w-full p-4 bg-white rounded-2xl shadow-lg border border-gray-200">
           {selectedRestaurantData ? (
             <a
               href={selectedRestaurantData.url}
@@ -96,19 +96,19 @@ const Shibuya: React.FC = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="p-4 rounded-xl border border-blue-200 bg-blue-50 text-blue-600 mb-6 hover:bg-blue-100 transition-all duration-300">
+              <div className="p-4 rounded-xl border border-gray-200 bg-gray-50 text-gray-700 mb-6 hover:bg-gray-100 transition-all duration-300">
                 <div className="text-left">
                   <div className="font-bold text-lg">
                     {selectedRestaurantData.name}
                   </div>
-                  <div className="text-sm text-blue-500 mt-2">
+                  <div className="text-sm text-gray-600 mt-2">
                     {selectedRestaurantData.address}
                   </div>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {selectedRestaurantData.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs"
+                        className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
                       >
                         {tag}
                       </span>
@@ -129,7 +129,7 @@ const Shibuya: React.FC = () => {
 
           <button
             onClick={handleRandomSelect}
-            className="ripple w-full p-4 text-center rounded-xl border-2 border-blue-400 bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 font-bold mb-6 shadow-md"
+            className="ripple w-full p-4 text-center rounded-xl border-2 border-gray-300 bg-gradient-to-r from-gray-600 to-gray-700 text-white hover:from-gray-700 hover:to-gray-800 transition-all duration-300 font-bold mb-6 shadow-md"
           >
             🤞Choice
           </button>
@@ -143,7 +143,7 @@ const Shibuya: React.FC = () => {
                   onClick={() => toggleTag(tag.label)}
                   className={`px-3 py-1 rounded-full text-sm transition-all duration-300 ${
                     selectedTags.includes(tag.label)
-                      ? "bg-blue-100 text-blue-600 border border-blue-200"
+                      ? "bg-gray-200 text-gray-700 border border-gray-300"
                       : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
                   }`}
                 >
