@@ -7,6 +7,7 @@ import { AVAILABLE_TAGS } from "@/models/Tags";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import "./ripple.css";
+import "./float-button.css";
 
 const Shibuya: React.FC = () => {
   const searchParams = useSearchParams();
@@ -88,7 +89,7 @@ const Shibuya: React.FC = () => {
     <>
       <Header />
       <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-20 px-4 sm:px-6">
-        <div className="max-w-md w-full p-4 bg-white rounded-2xl shadow-lg border border-gray-200">
+        <div className="max-w-md w-full p-4 bg-white rounded-2xl shadow-lg border border-gray-200 content-wrapper">
           {selectedRestaurantData ? (
             <a
               href={selectedRestaurantData.url}
@@ -127,13 +128,6 @@ const Shibuya: React.FC = () => {
             </div>
           )}
 
-          <button
-            onClick={handleRandomSelect}
-            className="ripple w-full p-4 text-center rounded-xl border-2 border-gray-300 bg-gradient-to-r from-gray-600 to-gray-700 text-white hover:from-gray-700 hover:to-gray-800 transition-all duration-300 font-bold mb-6 shadow-md"
-          >
-            🤞Choice
-          </button>
-
           <div className="mb-6">
             <div className="text-sm text-gray-600 mb-2">タグを選択</div>
             <div className="flex flex-wrap gap-2">
@@ -154,6 +148,13 @@ const Shibuya: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      <button
+        onClick={handleRandomSelect}
+        className="float-button ripple"
+      >
+        🤞Choice
+      </button>
     </>
   );
 };
