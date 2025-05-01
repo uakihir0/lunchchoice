@@ -7,6 +7,36 @@
       "latitude": 35.6568464594218,
       "longitude": 139.70222181728727,
       "url": "https://tabelog.com/tokyo/A1303/A130301/13299430/",
+      "tags": ["MV", "和食", "渋谷サクラステージ", "¥1000~1500", "大人数"],
+      "weight": 1
+    },
+    {
+      "id": "nakamenoteppen",
+      "name": "なかめのてっぺん 渋谷ストリーム店",
+      "address": "渋谷ストリーム 3F",
+      "latitude": 35.65707796850726,
+      "longitude": 139.70349112594485,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13225144/dtlmenu/lunch/",
+      "tags": ["MV", "和食", "渋谷ストリーム", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "maisen",
+      "name": "とんかつ まい泉 渋谷ヒカリエ",
+      "address": "渋谷ヒカリエ 6F",
+      "latitude": 35.65926986646203,
+      "longitude": 139.70360583702123,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13140072/",
+      "tags": ["MV", "和食", "渋谷ヒカリエ", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "shimizu",
+      "name": "鶏料理 清水",
+      "address": "渋谷ストリーム 2F",
+      "latitude": 35.65729470421787,
+      "longitude": 139.70297784496137,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13287479/",
       "tags": ["MV", "和食", "渋谷ストリーム", "¥1000~1500"],
       "weight": 1
     },
@@ -18,6 +48,66 @@
       "longitude": 139.7030908529342,
       "url": "https://tabelog.com/tokyo/A1303/A130301/13286388/",
       "tags": ["MV", "洋食", "渋谷ストリーム", "TOQPass", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "craftbeertap",
+      "name": "クラフトビールタップ グリル＆キッチン 渋谷",
+      "address": "渋谷ストリーム 3F",
+      "latitude": 35.657029368674024,
+      "longitude": 139.70347003030759,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13225417/",
+      "tags": ["MV", "洋食", "渋谷ストリーム", "TOQPass", "¥1000~1500", "大人数"],
+      "weight": 1
+    },
+    {
+      "id": "cerveza",
+      "name": "セルベサ・ジャパン 渋谷アクシュ",
+      "address": "渋谷アクシュ 2F",
+      "latitude": 35.6592672306841,
+      "longitude": 139.7044940457712,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13297654/",
+      "tags": ["MV", "洋食", "パエリア", "渋谷アクシュ", "¥1000~1500", "大人数"],
+      "weight": 1
+    },
+    {
+      "id": "greatburgerstand",
+      "name": "THE GREAT BURGER STAND",
+      "address": "渋谷ストリーム 1F",
+      "latitude": 35.657751275420296,
+      "longitude": 139.70299259710973,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13225844/",
+      "tags": ["MV", "ハンバーガー", "渋谷ストリーム", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "jbstokyo",
+      "name": "BAKERY&BURGER JB's TOKYO ミヤシタパーク店",
+      "address": "MIYASHITA PARK South 2F",
+      "latitude": 35.661478454431304,
+      "longitude": 139.70186475313307,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13288447/",
+      "tags": ["MV", "ハンバーガー", "MIYASHITA PARK", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "takibiya",
+      "name": "焚火家 渋谷店",
+      "address": "東京都渋谷区渋谷 1-15-19 東口二葉ビル 1F",
+      "latitude": 35.6606992979714,
+      "longitude": 139.70262062594523,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13130110/",
+      "tags": ["MV", "焼肉", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "yakiniku78",
+      "name": "焼肉 78",
+      "address": "渋谷サクラステージ SHIBUYA SIDE 4F",
+      "latitude": 35.656782946949924,
+      "longitude": 139.7022551240989,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13299433/",
+      "tags": ["MV", "焼肉", "渋谷サクラステージ", "¥1000~1500"],
       "weight": 1
     },
     {
@@ -47,13 +137,73 @@
       "latitude": 35.65919151641043,
       "longitude": 139.6989835856903,
       "url": "https://tabelog.com/tokyo/A1303/A130301/13094387/",
-      "tags": ["MV", "ラーメン", "つけ麺", "~¥1000"],
+      "tags": ["MV", "ラーメン", "つけ麺", "渋東シネタワー", "~¥1000"],
+      "weight": 1
+    },
+    {
+      "id": "tsurutontan",
+      "name": "つるとんたん UDON NOODLE Brasserie 渋谷店",
+      "address": "渋谷スクランブルスクエア 13F",
+      "latitude": 35.658664503525145,
+      "longitude": 139.7021206817693,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13240100/",
+      "tags": ["MV", "うどん", "渋谷スクランブルスクエア", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "yasubee",
+      "name": "つけ麺屋 やすべえ 渋谷店",
+      "address": "東京都渋谷区渋谷 3-18-7",
+      "latitude": 35.65732752021082,
+      "longitude": 139.70382642594492,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13001149/",
+      "tags": ["MV", "つけ麺", "~¥1000"],
+      "weight": 1
+    },
+    {
+      "id": "sasajin",
+      "name": "笹陣 渋谷店",
+      "address": "渋谷メトロプラザ 1F",
+      "latitude": 35.661693513709984,
+      "longitude": 139.7025470529343,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13049753/",
+      "tags": ["MV", "そば", "渋谷メトロプラザ", "~¥1000"],
+      "weight": 1
+    },
+    {
+      "id": "tokyomixcurry",
+      "name": "TOKYO MIX CURRY 渋谷クロスタワー",
+      "address": "渋谷クロスタワー 1F",
+      "latitude": 35.65888146037771,
+      "longitude": 139.7054474731183,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13307977/",
+      "tags": ["MV", "カレー", "渋谷クロスタワー", "~¥1000"],
+      "weight": 1
+    },
+    {
+      "id": "chaothai",
+      "name": "チャオタイ 渋谷アクシュ店",
+      "address": "渋谷アクシュ 1F",
+      "latitude": 35.65907008360636,
+      "longitude": 139.70450317464318,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13299179/",
+      "tags": ["MV", "タイ料理", "渋谷アクシュ", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "kokkio",
+      "name": "韓国酒場コッキオ 渋谷サクラステージ店",
+      "address": "渋谷サクラステージ SHIBUYA SIDE B1F",
+      "latitude": 35.65745508068483,
+      "longitude": 139.70181015293412,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13299043/",
+      "tags": ["MV", "韓国料理", "渋谷サクラステージ", "¥1000~1500"],
       "weight": 1
     },
     {
       "id": "ringerhut",
       "name": "リンガーハット 渋谷サクラステージ店",
-      "address": "渋谷サクラステージ SHIBUYA SIDE B1",
+      "address": "渋谷サクラステージ SHIBUYA SIDE B1F",
       "latitude": 35.657499395940135,
       "longitude": 139.70185839881796,
       "url": "https://tabelog.com/tokyo/A1303/A130301/13299427/",
