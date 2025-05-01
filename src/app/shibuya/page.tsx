@@ -98,7 +98,7 @@ const Shibuya: React.FC = () => {
             >
               <div className="p-4 rounded-xl border border-blue-200 bg-blue-50 text-blue-600 mb-6 hover:bg-blue-100 transition-all duration-300">
                 <div className="text-left">
-                  <div className="font-bold text-lg">
+                  <div className="font-bold text-lg whitespace-nowrap text-ellipsis overflow-hidden">
                     {selectedRestaurantData.name}
                   </div>
                   <div className="text-sm text-blue-500 mt-2">
