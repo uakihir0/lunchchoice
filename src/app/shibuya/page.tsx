@@ -17,6 +17,7 @@ const Shibuya: React.FC = () => {
   );
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [excludedTags, setExcludedTags] = useState<string[]>([]);
   const [hasAttemptedChoice, setHasAttemptedChoice] = useState(false);
 
   useEffect(() => {
@@ -25,18 +26,36 @@ const Shibuya: React.FC = () => {
     // クエリパラメータからタグを取得
     const tags = searchParams.get("tags");
     if (tags) {
-      setSelectedTags(tags.split(","));
+      const includedTags: string[] = [];
+      const excludedTags: string[] = [];
+      tags.split(",").forEach((tag) => {
+        if (tag.startsWith("-")) {
+          excludedTags.push(tag.substring(1));
+        } else {
+          includedTags.push(tag);
+        }
+      });
+      setSelectedTags(includedTags);
+      setExcludedTags(excludedTags);
     }
   }, [searchParams]);
 
   const handleRandomSelect = () => {
     setHasAttemptedChoice(true);
     // 選択されたタグに基づいてレストランをフィルタリング
-    const filteredRestaurants = restaurants.filter((restaurant) =>
-      selectedTags.length === 0
-        ? true
-        : selectedTags.every((tag) => restaurant.tags.includes(tag))
-    );
+    const filteredRestaurants = restaurants.filter((restaurant) => {
+      // 含む条件のチェック
+      const matchesIncludedTags =
+        selectedTags.length === 0 ||
+        selectedTags.every((tag) => restaurant.tags.includes(tag));
+
+      // 含まない条件のチェック
+      const matchesExcludedTags =
+        excludedTags.length === 0 ||
+        excludedTags.every((tag) => !restaurant.tags.includes(tag));
+
+      return matchesIncludedTags && matchesExcludedTags;
+    });
 
     if (filteredRestaurants.length > 0) {
       // 重みの合計を計算
@@ -65,15 +84,33 @@ const Shibuya: React.FC = () => {
   };
 
   const toggleTag = (tag: string) => {
-    const newTags = selectedTags.includes(tag)
-      ? selectedTags.filter((t) => t !== tag)
-      : [...selectedTags, tag];
-    setSelectedTags(newTags);
+    let newSelectedTags = [...selectedTags];
+    let newExcludedTags = [...excludedTags];
+
+    if (selectedTags.includes(tag)) {
+      // 含む条件から含まない条件に変更
+      newSelectedTags = selectedTags.filter((t) => t !== tag);
+      newExcludedTags = [...excludedTags, tag];
+    } else if (excludedTags.includes(tag)) {
+      // 含まない条件を解除
+      newExcludedTags = excludedTags.filter((t) => t !== tag);
+    } else {
+      // 新しく含む条件として追加
+      newSelectedTags = [...selectedTags, tag];
+    }
+
+    setSelectedTags(newSelectedTags);
+    setExcludedTags(newExcludedTags);
 
     // URLを更新
     const params = new URLSearchParams(searchParams.toString());
-    if (newTags.length > 0) {
-      params.set("tags", newTags.join(","));
+    const allTags = [
+      ...newSelectedTags,
+      ...newExcludedTags.map((tag) => `-${tag}`),
+    ];
+
+    if (allTags.length > 0) {
+      params.set("tags", allTags.join(","));
     } else {
       params.delete("tags");
     }
@@ -128,7 +165,11 @@ const Shibuya: React.FC = () => {
           )}
 
           <div className="mb-6">
-            <div className="text-sm text-gray-600 mb-2">タグを選択</div>
+            <div className="text-sm text-gray-600 mb-3">
+              <div className="text-xs">
+                タグをクリックで「含む」→「含まない」→「解除」
+              </div>
+            </div>
             <div className="flex flex-wrap gap-2">
               {AVAILABLE_TAGS.map((tag) => (
                 <button
@@ -136,7 +177,9 @@ const Shibuya: React.FC = () => {
                   onClick={() => toggleTag(tag.label)}
                   className={`px-3 py-1 rounded-full text-sm transition-all duration-300 ${
                     selectedTags.includes(tag.label)
-                      ? "bg-gray-200 text-gray-700 border border-gray-300"
+                      ? "bg-blue-100 text-blue-700 border border-blue-300"
+                      : excludedTags.includes(tag.label)
+                      ? "bg-red-100 text-red-700 border border-red-300"
                       : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
                   }`}
                 >
