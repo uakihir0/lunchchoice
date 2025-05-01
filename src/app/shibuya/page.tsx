@@ -7,14 +7,13 @@ import { AVAILABLE_TAGS } from "@/models/Tags";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import "./ripple.css";
-import "./float-button.css";
 
 const Shibuya: React.FC = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
   const [selectedRestaurant, setSelectedRestaurant] = useState<string | null>(
-    null,
+    null
   );
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -36,14 +35,14 @@ const Shibuya: React.FC = () => {
     const filteredRestaurants = restaurants.filter((restaurant) =>
       selectedTags.length === 0
         ? true
-        : selectedTags.every((tag) => restaurant.tags.includes(tag)),
+        : selectedTags.every((tag) => restaurant.tags.includes(tag))
     );
 
     if (filteredRestaurants.length > 0) {
       // 重みの合計を計算
       const totalWeight = filteredRestaurants.reduce(
         (sum, restaurant) => sum + (restaurant.weight || 1),
-        0,
+        0
       );
 
       // 重みに基づいてランダムな値を生成
@@ -82,14 +81,14 @@ const Shibuya: React.FC = () => {
   };
 
   const selectedRestaurantData = restaurants.find(
-    (r) => r.id === selectedRestaurant,
+    (r) => r.id === selectedRestaurant
   );
 
   return (
     <>
       <Header />
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-20 px-4 sm:px-6">
-        <div className="max-w-md w-full p-4 bg-white rounded-2xl shadow-lg border border-gray-200 content-wrapper">
+      <div className="min-h-screen bg-gray-50 pt-20 px-4 sm:px-6 pb-24">
+        <div className="max-w-md mx-auto p-4 bg-white rounded-2xl shadow-lg border border-gray-200">
           {selectedRestaurantData ? (
             <a
               href={selectedRestaurantData.url}
@@ -148,13 +147,17 @@ const Shibuya: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      <button
-        onClick={handleRandomSelect}
-        className="float-button ripple"
-      >
-        🤞Choice
-      </button>
+
+      <div className="fixed bottom-4 left-0 right-0 p-4">
+        <div className="max-w-md mx-auto">
+          <button
+            onClick={handleRandomSelect}
+            className="w-full px-6 py-3 rounded-full font-medium text-white bg-gradient-to-r from-gray-600 to-gray-800 whitespace-nowrap text-sm ripple"
+          >
+            🤞Choice
+          </button>
+        </div>
+      </div>
     </>
   );
 };
