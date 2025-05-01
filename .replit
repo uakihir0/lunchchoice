@@ -1,5 +1,4 @@
 modules = ["nodejs-20", "web"]
-compile = "pnpm run build"
 run = "pnpm run dev"
 
 [nix]
@@ -8,3 +7,7 @@ channel = "stable-24_05"
 [deployment]
 build = ["sh", "-c", "pnpm run build"]
 run = ["sh", "-c", "pnpm run dev"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
