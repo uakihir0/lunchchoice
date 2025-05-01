@@ -13,7 +13,7 @@ const Shibuya: React.FC = () => {
   const router = useRouter();
 
   const [selectedRestaurant, setSelectedRestaurant] = useState<string | null>(
-    null
+    null,
   );
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -35,14 +35,14 @@ const Shibuya: React.FC = () => {
     const filteredRestaurants = restaurants.filter((restaurant) =>
       selectedTags.length === 0
         ? true
-        : selectedTags.every((tag) => restaurant.tags.includes(tag))
+        : selectedTags.every((tag) => restaurant.tags.includes(tag)),
     );
 
     if (filteredRestaurants.length > 0) {
       // 重みの合計を計算
       const totalWeight = filteredRestaurants.reduce(
         (sum, restaurant) => sum + (restaurant.weight || 1),
-        0
+        0,
       );
 
       // 重みに基づいてランダムな値を生成
@@ -81,7 +81,7 @@ const Shibuya: React.FC = () => {
   };
 
   const selectedRestaurantData = restaurants.find(
-    (r) => r.id === selectedRestaurant
+    (r) => r.id === selectedRestaurant,
   );
 
   return (
@@ -98,7 +98,7 @@ const Shibuya: React.FC = () => {
             >
               <div className="p-4 rounded-xl border border-blue-200 bg-blue-50 text-blue-600 mb-6 hover:bg-blue-100 transition-all duration-300">
                 <div className="text-left">
-                  <div className="font-bold text-lg whitespace-nowrap text-ellipsis overflow-hidden">
+                  <div className="font-bold text-lg">
                     {selectedRestaurantData.name}
                   </div>
                   <div className="text-sm text-blue-500 mt-2">
