@@ -21,6 +21,8 @@ alwaysApply: true
 
 ## 留意事項
 
-- Use Next.js 14 App Router
-- Use Tailwind CSS for styling
-- Use Shadcn UI for components
+- Next.js 14 App Router を使用
+- Tailwind CSS をスタイルで使用
+- Shadcn UI をコンポーネントとして使用
+- コミットメッセージは日本語を使用
+
