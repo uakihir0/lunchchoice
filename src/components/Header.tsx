@@ -6,9 +6,9 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-gray-200">
-          <div className="px-6 py-2 flex items-center justify-between">
+          <div className="px-6 py-4 flex items-center justify-between">
             <div className="flex items-center">
-              <h1 className="text-lg font-light tracking-wide text-gray-700">
+              <h1 className="text-xl font-light tracking-wide text-gray-700">
                 🤞 LunchChoice
               </h1>
             </div>
