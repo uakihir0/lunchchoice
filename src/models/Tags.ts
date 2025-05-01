@@ -1,16 +1,22 @@
 export const AVAILABLE_TAGS = [
+  // ジャンル
   { id: "ramen", label: "ラーメン" },
-  { id: "yakiniku", label: "焼肉" },
-  { id: "italian", label: "イタリアン" },
-  { id: "french", label: "フレンチ" },
+  { id: "washoku", label: "和食" },
+  { id: "yoshoku", label: "洋食" },
+  { id: "chanpon", label: "ちゃんぽん" },
   { id: "tsukemen", label: "つけ麺" },
-  { id: "solo", label: "一人" },
-  { id: "date", label: "デート" },
-  { id: "group", label: "グループ" },
-  { id: "counter", label: "カウンター" },
-  { id: "luxury", label: "高級" },
-  { id: "stylish", label: "おしゃれ" },
-  { id: "24hours", label: "24時間" },
+
+  // 値段帯
+  { id: "price_1000_1500", label: "¥1000~1500" },
+  { id: "price_under_1000", label: "~¥1000" },
+
+  // 場所
+  { id: "shibuya_stream", label: "渋谷ストリーム" },
+  { id: "shibuya_sakura", label: "渋谷サクラステージ" },
+
+  // その他
+  { id: "mv", label: "MV" },
+  { id: "toqpass", label: "TOQPass" },
 ] as const;
 
 export type TagId = (typeof AVAILABLE_TAGS)[number]["id"];
