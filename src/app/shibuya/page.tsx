@@ -114,7 +114,7 @@ const Shibuya: React.FC = () => {
     } else {
       params.delete("tags");
     }
-    router.push(`?${params.toString()}`);
+    router.replace(`?${params.toString()}`, { scroll: false });
   };
 
   const selectedRestaurantData = restaurants.find(
