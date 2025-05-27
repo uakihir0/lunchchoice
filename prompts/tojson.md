@@ -1,4 +1,4 @@
-この `doc/shibuya.md` に記載されている、おすすめレストランの markdown を JSON 形式に変換してください。変換した JSON は `src/data/shibuya.json` に上書き保存してください。変換する形式は以下のような JSON ファイルを想定しています。また、各フィールドの意味は、JSON をモデルマッピングした先の`src/models/Restaurant.ts` を参考にしてください。
+この `doc/shibuya.md` に記載されている、おすすめレストランの markdown を JSON 形式に変換してください。変換した JSON は `src/data/shibuya.json` に上書き保存してください。変換する形式は以下のような JSON ファイルを想定しています。また、各フィールドの意味は、JSON をモデルマッピングした先の`src/models/Restaurant.ts` を参考にしてください。差分に注意して更新してくさい。
 
 ```
 {

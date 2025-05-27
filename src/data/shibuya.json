@@ -71,6 +71,16 @@
       "weight": 1
     },
     {
+      "id": "haleinahoa",
+      "name": "hale'aina HOA Shibuya",
+      "address": "渋谷アクシュ 1F",
+      "latitude": 35.65925849881531,
+      "longitude": 139.70454079710987,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13298163/",
+      "tags": ["MV", "洋食", "ハワイアン", "渋谷アクシュ", "¥1000~1500"],
+      "weight": 1
+    },
+    {
       "id": "greatburgerstand",
       "name": "THE GREAT BURGER STAND",
       "address": "渋谷ストリーム 1F",
@@ -177,7 +187,17 @@
       "latitude": 35.65888146037771,
       "longitude": 139.7054474731183,
       "url": "https://tabelog.com/tokyo/A1303/A130301/13307977/",
-      "tags": ["MV", "カレー", "渋谷クロスタワー", "~¥1000"],
+      "tags": ["MV", "カレー", "渋谷クロスタワー", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "centerbeef",
+      "name": "センタービーフ 渋谷店",
+      "address": "東京都渋谷区渋谷 3-7-7 第 6 矢木ビル 1F",
+      "latitude": 35.65774230478688,
+      "longitude": 139.7046130103398,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13307817/",
+      "tags": ["MV", "カレー", "¥1000~1500"],
       "weight": 1
     },
     {
@@ -198,6 +218,16 @@
       "longitude": 139.70181015293412,
       "url": "https://tabelog.com/tokyo/A1303/A130301/13299043/",
       "tags": ["MV", "韓国料理", "渋谷サクラステージ", "¥1000~1500"],
+      "weight": 1
+    },
+    {
+      "id": "bangkokkaosan",
+      "name": "バンコク屋台 カオサン 渋谷宮益坂",
+      "address": "東京都渋谷区渋谷 1-8-5 小山ビル 2F",
+      "latitude": 35.66048581560491,
+      "longitude": 139.7054881106045,
+      "url": "https://tabelog.com/tokyo/A1303/A130301/13209312/",
+      "tags": ["MV", "タイ料理", "¥1000~1500"],
       "weight": 1
     },
     {

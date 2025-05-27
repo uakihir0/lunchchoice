@@ -5,13 +5,15 @@ export const AVAILABLE_TAGS = [
   { id: "hamburger", label: "ハンバーガー" },
   { id: "yakiniku", label: "焼肉" },
   { id: "ramen", label: "ラーメン" },
-  { id: "udon", label: "うどん" },
   { id: "tsukemen", label: "つけ麺" },
+  { id: "udon", label: "うどん" },
   { id: "soba", label: "そば" },
   { id: "curry", label: "カレー" },
   { id: "thai", label: "タイ料理" },
   { id: "korean", label: "韓国料理" },
   { id: "chanpon", label: "ちゃんぽん" },
+  { id: "paella", label: "パエリア" },
+  { id: "hawaiian", label: "ハワイアン" },
 
   // 値段帯
   { id: "price_under_1000", label: "~¥1000" },
@@ -32,7 +34,6 @@ export const AVAILABLE_TAGS = [
   { id: "mv", label: "MV" },
   { id: "toqpass", label: "TOQPass" },
   { id: "large_group", label: "大人数" },
-  { id: "paella", label: "パエリア" },
 ] as const;
 
 export type TagId = (typeof AVAILABLE_TAGS)[number]["id"];
